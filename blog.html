@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Artikel | Ebenheiserr</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- ====== META SEO ====== -->
+<meta name="description" content="Website pribadi yang berisi artikel inspiratif, teknologi, dan pengembangan diri. Temukan berbagai pembahasan menarik seputar pemrograman, pendidikan, dan kreativitas." />
+<meta name="keywords" content="heiser, website pribadi, teknologi, artikel, pendidikan, pemrograman, pengembangan diri, motivasi, web developer, blog pribadi" />
+<meta name="author" content="Heiser Dev" />
+<meta name="robots" content="index, follow" />
+<meta name="language" content="id" />
+
+<!-- ====== META UNTUK GOOGLE ====== -->
+<meta name="google-site-verification=WXUiLz4-84J017y0QHWjM23PxGmsj0Y8_H08lum01MY" />
+
+<!-- ====== META UNTUK FACEBOOK / WHATSAPP ====== -->
+<meta property="og:title" content="Website Pribadi Heiser | Artikel, Teknologi, dan Inspirasi" />
+<meta property="og:description" content="Situs pribadi berisi artikel edukatif dan inspiratif tentang teknologi, bahasa pemrograman, serta pengembangan diri." />
+<meta property="og:image" content="https://contohwebsite.com/images/thumbnail-utama.jpg" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://contohwebsite.com/" />
+<meta property="og:locale" content="id_ID" />
+
+<!-- ====== META UNTUK TWITTER ====== -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Website Pribadi Heiser | Artikel, Teknologi, dan Inspirasi" />
+<meta name="twitter:description" content="Temukan artikel inspiratif tentang teknologi, coding, dan pengembangan diri di Website Pribadi Heiser." />
+<meta name="twitter:image" content="https://contohwebsite.com/images/thumbnail-utama.jpg" />
+<meta name="twitter:creator" content="@heiserdev" />
+
+<!-- ====== FAVICON (ICON WEBSITE) ====== -->
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+<!-- ====== WARNA TAB BROWSER (ANDROID/CHROME) ====== -->
+<meta name="theme-color" content="#0d6efd" />
+
+  <style>
+    /* ===== RESET DASAR ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f8f9fa;
+      color: #222;
+      overflow-y: auto;
+      line-height: 1.6;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: #004aad;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+
+  .logo {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  nav  {
+    display: flex;
+  }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+      font-size: 0.95rem;
+      padding: 8px 0;
+      display: inline-block;
+      margin: 0 10px; /*kasih jarak kiri-kanan antara menu */
+    }
+
+
+  nav a:hover,
+  nav a.active {
+    color: #ffd700;
+  }
+
+  /* ===== MENU TOGGLE ===== */
+  .menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+  }
+
+  .menu-toggle:hover {
+    color: #ffd700;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    position: relative;
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url("eben.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    color: #f0f0f0;
+  }
+
+  /* ===== KONTEN ARTIKEL ===== */
+  main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .article {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+  }
+
+  .article:last-child {
+    border: none;
+  }
+
+  .article h2 {
+    color: #004aad;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+
+  .article small {
+    color: #666;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .article p {
+    text-align: justify;
+    font-size: 0.95rem;
+    color: #333;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 12px;
+    background: #004aad;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background: #007bff;
+  }
+
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: #004aad;
+    color: white;
+    font-size: 0.85rem;
+  }
+
+  /* ===== SCROLLBAR ===== */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #eee;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #004aad;
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #007bff;
+  }
+
+  /* ===== RESPONSIF (MOBILE) ===== */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background: #004aad;
+      padding: 15px 0;
+      text-align: center;
+      animation: slideDown 0.3s ease forwards;
+    }
+
+    nav.show {
+      display: flex;
+    }
+
+    nav a {
+      display: block;
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 1.5rem;
+    }
+
+    .hero {
+      height: 50vh;
+    }
+
+    main {
+      margin: 15px;
+      padding: 15px;
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1 class="logo">🌐 Ebenheiserr</h1>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav id="navbar">
+      <a href="index.html">Beranda</a>
+      <a href="about.html">Tentang</a>
+      <a href="gallery.html">Galeri</a>
+      <a href="blog.html" class="active">Artikel</a>
+      <a href="contact.html">Kontak</a>
+
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <h1>Artikel & Tulisan Saya</h1>
+    <p>Berbagi ide, opini, dan inspirasi lewat tulisan.</p>
+  </section>
+
+  <!-- ===== DAFTAR ARTIKEL ===== -->
+  <main>
+    <div class="article">
+      <h2>1. Pentingnya Pendidikan di Era Digital</h2>
+      <small>Dipublikasikan pada 12 Oktober 2025 oleh Ebenheiserr</small>
+      <p>
+        Pendidikan kini tidak hanya terjadi di ruang kelas. Dunia digital membuka
+        akses luas untuk belajar dari mana saja dan kapan saja. Teknologi bukan
+        ancaman, tetapi peluang besar untuk meningkatkan kualitas sumber daya manusia
+        jika digunakan dengan bijak.
+      </p>
+      <a href="artikel1.html" class="btn">Selengkapnya</a>
+    </div>
+
+    <div class="article">
+      <h2>2. Membangun Motivasi dari Dalam Diri</h2>
+      <small>Dipublikasikan pada 7 Oktober 2025 oleh Ebenheiserr</small>
+      <p>
+        Sukses tidak datang dari luar, melainkan dari tekad dan disiplin diri.
+        Motivasi sejati muncul ketika kita memahami makna di balik tujuan hidup
+        yang ingin dicapai.
+      </p>
+      <a href="artikel2.html" class="btn">Selengkapnya</a>
+    </div>
+
+    <div class="article">
+      <h2>3. Kreativitas di Tengah Tantangan Hidup</h2>
+      <small>Dipublikasikan pada 1 Oktober 2025 oleh Ebenheiserr</small>
+      <p>
+        Setiap tantangan selalu menyimpan peluang untuk belajar hal baru. Kreativitas
+        lahir ketika kita berani keluar dari zona nyaman dan mencoba cara berpikir
+        yang berbeda.
+      </p>
+      <a href="artikel3.html" class="btn">Selengkapnya</a>
+    </div>
+
+        <div class="article">
+      <h2>4. Mengenal Beberapa Bahasa Pemrograman Populer</h2>
+      <small>Dipublikasikan pada 1 Oktober 2025 oleh Ebenheiserr</small>
+      <p>
+        Mulai dari hal sederhana , tapi hasilnya luar biasa
+      </p>
+      <a href="artikel4.html" class="btn">Selengkapnya</a>
+    </div>
+
+        <div class="article">
+      <h2>5. Membangun Pengembangan Diri Melalui Pendidikan: Kunci Sukses di Era Modern
+</h2>
+      <small>Dipublikasikan pada 1 Oktober 2025 oleh Ebenheiserr</small>
+      <p>
+Jangan menyerah meski cape, meski gagal, tetap gas terus
+      </p>
+      <a href="artikel5.html" class="btn">Selengkapnya</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Website Pribadi Saya. Semua Hak Dilindungi.</p>
+  </footer>
+
+    <!-- ===== JAVASCRIPT MENU ===== -->
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+    toggle.addEventListener('click', () => {
+      navbar.classList.toggle('show');
+    });
+  </script>
+
+
+</body>
+</html>

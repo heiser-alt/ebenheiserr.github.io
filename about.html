@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tentang | Ebenheiserr</title>
+  <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<!-- ====== META SEO ====== -->
+<meta name="description" content="Website pribadi yang berisi artikel inspiratif, teknologi, dan pengembangan diri. Temukan berbagai pembahasan menarik seputar pemrograman, pendidikan, dan kreativitas." />
+<meta name="keywords" content="heiser, website pribadi, teknologi, artikel, pendidikan, pemrograman, pengembangan diri, motivasi, web developer, blog pribadi" />
+<meta name="author" content="Heiser Dev" />
+<meta name="robots" content="index, follow" />
+<meta name="language" content="id" />
+
+<!-- ====== META UNTUK GOOGLE ====== -->
+<meta name="google-site-verification" content="ISI_KODE_VERIFIKASI_GOOGLE_KAMU_DI_SINI" />
+
+<!-- ====== META UNTUK FACEBOOK / WHATSAPP ====== -->
+<meta property="og:title" content="Website Pribadi Heiser | Artikel, Teknologi, dan Inspirasi" />
+<meta property="og:description" content="Situs pribadi berisi artikel edukatif dan inspiratif tentang teknologi, bahasa pemrograman, serta pengembangan diri." />
+<meta property="og:image" content="https://contohwebsite.com/images/thumbnail-utama.jpg" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://contohwebsite.com/" />
+<meta property="og:locale" content="id_ID" />
+
+<!-- ====== META UNTUK TWITTER ====== -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Website Pribadi Heiser | Artikel, Teknologi, dan Inspirasi" />
+<meta name="twitter:description" content="Temukan artikel inspiratif tentang teknologi, coding, dan pengembangan diri di Website Pribadi Heiser." />
+<meta name="twitter:image" content="https://contohwebsite.com/images/thumbnail-utama.jpg" />
+<meta name="twitter:creator" content="@heiserdev" />
+
+<!-- ====== FAVICON (ICON WEBSITE) ====== -->
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+<!-- ====== WARNA TAB BROWSER (ANDROID/CHROME) ====== -->
+<meta name="theme-color" content="#0d6efd" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f8f9fa;
+      color: #222;
+      line-height: 1.6;
+      overflow-y: auto;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: #004aad;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+      font-size: 0.95rem;
+      padding: 8px 0;
+      display: inline-block;
+      margin: 0 10px; /*kasih jarak kiri-kanan antara menu */
+    }
+
+
+    nav a:hover,
+    nav a.active {
+      color: #ffd700;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      height: 60vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url("eben.jpg") center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 0 15px;
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      color: #f0f0f0;
+      font-size: 1rem;
+    }
+
+    /* ===== KONTEN ===== */
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      text-align: justify;
+    }
+
+    main h2 {
+      color: #004aad;
+      margin-bottom: 10px;
+    }
+
+    main p {
+      margin-bottom: 15px;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #004aad;
+      color: white;
+      font-size: 0.85rem;
+    }
+
+    /* ===== SCROLLBAR ===== */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #eee; }
+    ::-webkit-scrollbar-thumb { background: #004aad; border-radius: 8px; }
+    ::-webkit-scrollbar-thumb:hover { background: #007bff; }
+
+    /* ===== RESPONSIF ===== */
+    @media (max-width: 768px) {
+      .hero { height: 50vh; }
+      .hero h1 { font-size: 1.5rem; }
+      main { margin: 15px; padding: 15px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1 class="logo">🌐 Ebenheiserr</h1>
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+  <nav id="navbar">
+    <a href="index.html" class="active">Beranda</a>
+    <a href="about.html">Tentang</a>
+    <a href="gallery.html">Galeri</a>
+    <a href="blog.html">Artikel</a>
+    <a href="contact.html">Kontak</a>
+
+  </nav>
+</header>
+
+  <section class="hero">
+    <h1>Tentang Saya</h1>
+    <p>Kenali lebih dekat tentang perjalanan dan karya saya.</p>
+  </section>
+
+  <main>
+    <h2>Hai, Saya Ebenheiserr 👋</h2>
+    <p>
+      Saya seorang yang gemar belajar dan berbagi inspirasi melalui tulisan serta teknologi.
+      Website ini menjadi tempat saya menyalurkan ide, pengalaman, dan proyek-proyek yang telah saya buat.
+    </p>
+    <p>
+      Saya percaya bahwa setiap orang memiliki potensi besar jika diberikan kesempatan dan lingkungan yang tepat.
+      Melalui halaman ini, saya ingin menginspirasi lebih banyak orang untuk terus berkembang.
+    </p>
+    <p>
+      Selain itu, saya juga tertarik dengan dunia desain web, pendidikan, serta pengembangan diri.
+      Terima kasih sudah berkunjung — semoga Anda menemukan inspirasi di sini!
+    </p>
+    <p>website ini dibuat untuk berbagi artikel motivasi</p>
+    <p>Keahlian Saya : HTML Excel (input data dan membuat website sederhana</p>
+    <p>Pengalaman Kerja : 2 Tahun sampai saat ini</p>
+    <p>Untuk kerja sama atau pertanyaan, bisa hubungi saya di <a href="mailto:ebenheserngwalangara25@gmail.com">ebenheserngwalangara25@gmail.com</a></p>
+    <p>Semoga konten di website ini bisa menginspirasi dan membantu pengunjungdalam belajar dan berkarya.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Website Pribadi Saya. Semua Hak Dilindungi.</p>
+  </footer>
+
+  <script>
+  const toggle = document.querySelector('.menu-toggle');
+  const navbar = document.getElementById('navbar');
+
+  toggle.addEventListener('click', () => {
+    navbar.classList.toggle('show');
+    toggle.classList.toggle('active');
+  });
+</script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,508 @@
+
+    *{margin:0;padding:0;box-sizing:border-box;font-family:"Poppins",sans-serif;}
+    body{background:#f8f9fa;color:#222;}
+    header{background:#004aad;color:#fff;display:flex;justify-content:space-between;align-items:center;padding:10px 15px;}
+    nav a{color:#fff;text-decoration:none;margin:0 8px;}
+    nav a:hover,nav a.active{color:#ffd700;}
+    .hero{position:relative;height:60vh;background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("eben.jpg") center/cover no-repeat;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff;text-align:center;}
+    .hero img{width:130px;height:130px;border-radius:50%;border:4px solid #fff;margin-top:20px;}
+    main{max-width:850px;margin:30px auto;background:#fff;padding:25px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
+    footer{text-align:center;padding:12px;background:#004aad;color:#fff;}
+
+
+    #cuplikan-artikel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.artikel-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  flex: 1 1 calc(33% - 20px);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.artikel-card:hover {
+  transform: translateY(-5px);
+}
+
+.artikel-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  margin: 0 0 10px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #555;
+}
+
+.card-content .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.card-content .btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+  .artikel-card { flex: 1 1 100%; }
+}
+
+
+  /* ===== HEADER ===== */
+  header {
+    background: #004aad;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+.logo {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* ===== MENU NAVIGASI ===== */
+nav {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: 500;
+  transition: 0.3s;
+  font-size: 0.95rem;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ffd700;
+}
+
+/* ===== HAMBURGER ICON ===== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: white;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* ===== ANIMASI IKON JADI "X" SAAT AKTIF ===== */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* ===== RESPONSIF UNTUK HP ===== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #004aad;
+    text-align: center;
+    padding: 20px 0;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    display: block;
+    margin: 12px 0;
+    font-size: 1rem;
+  }
+}
+
+/* ===== ANIMASI MENU TURUN ===== */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ===== STYLE UNTUK ARTIKEL ===== */
+
+/* Gaya paragraf */
+main p {
+  margin-bottom: 18px;       /* jarak antar paragraf */
+  text-align: justify;       /* teks rata kanan-kiri */
+  text-indent: 25px;         /* awal paragraf menjorok ke dalam */
+  line-height: 1.9;          /* spasi antar baris */
+  color: #222;               /* warna teks */
+  font-size: 1.05rem;        /* ukuran teks sedikit lebih besar */
+}
+
+/* Heading utama di dalam artikel */
+main h2 {
+  margin-top: 30px;          /* jarak atas dari paragraf sebelumnya */
+  margin-bottom: 10px;       /* jarak bawah ke teks berikutnya */
+  color: #004aad;            /* warna biru agar menonjol */
+  font-size: 1.35rem;
+  border-left: 5px solid #004aad;
+  padding-left: 10px;
+  font-weight: 600;
+}
+
+/* Subjudul (lebih kecil dari h2) */
+main h3 {
+  margin-top: 25px;
+  margin-bottom: 8px;
+  color: #0066cc;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Sub-subjudul (penjelasan tambahan atau poin dalam bagian) */
+main h4 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #222;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Responsif biar tetap rapi di layar kecil */
+@media (max-width: 768px) {
+  main p {
+    text-indent: 15px;
+    line-height: 1.8;
+    font-size: 1rem;
+  }
+
+  main h2 {
+    font-size: 1.25rem;
+  }
+
+  main h3 {
+    font-size: 1.1rem;
+  }
+
+  main h4 {
+    font-size: 1rem;
+  }
+}
+
+      
+      .artikel-card {
+        flex-direction: column;
+        text-align: center;
+      }
+      .artikel-card img {
+        width: 100%;
+        height: 180px;
+      }
+
+
+       /* ===== RESET DASAR ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f8f9fa;
+      color: #222;
+      overflow-y: auto;
+      line-height: 1.6;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: #004aad;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    nav {
+      display: none; /* awalnya tersembunyi */
+      flex-direction: column;
+      background: #004aad;
+      position: absolute;
+      top: 55px;
+      right: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+      animation: slideDown 0.3s ease forwards;
+    }
+
+    nav.show {
+      display: flex;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: 0.3s;
+      font-size: 0.95rem;
+      padding: 8px 0;
+      display: inline-block;
+      margin: 0 10px; /*kasih jarak kiri-kanan antara menu */
+    }
+
+    nav a:hover,
+    nav a.active {
+      color: #ffd700;
+
+    }
+
+    /* ===== MENU TOGGLE (Garis 3) ===== */
+    .menu-toggle {
+      display: block;
+      font-size: 1.8rem;
+      cursor: pointer;
+      user-select: none;
+      transition: 0.3s;
+    }
+
+    .menu-toggle:hover {
+      color: #ffd700;
+    }
+
+    /* ===== ANIMASI MENU ===== */
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      background: url("eben.jpg") center/cover no-repeat;
+      height: 55vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 0 10px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      padding: 10px;
+    }
+
+    .hero-content h1 {
+      font-size: 1.9rem;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .hero-content p {
+      font-size: 0.95rem;
+      color: #f0f0f0;
+    }
+
+    /* ===== ARTIKEL ===== */
+    #cuplikan-artikel {
+      max-width: 900px;
+      margin: 25px auto;
+      padding: 10px;
+    }
+
+    #cuplikan-artikel h2 {
+      color: #004aad;
+      margin-bottom: 15px;
+      font-size: 1.3rem;
+      text-align: center;
+    }
+
+    .artikel-card {
+      display: flex;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 15px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    .artikel-card img {
+      width: 150px;
+      height: 120px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 10px;
+    }
+
+    .card-content h3 {
+      margin-bottom: 5px;
+      color: #004aad;
+      font-size: 1rem;
+    }
+
+    .card-content p {
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 5px 10px;
+      background: #004aad;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #003080;
+    }
+
+    /* ===== MAIN ===== */
+    main {
+      max-width: 900px;
+      margin: 25px auto;
+      padding: 15px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+
+    main h2 {
+      color: #004aad;
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    main p {
+      margin-bottom: 10px;
+      text-align: justify;
+      font-size: 0.93rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: #004aad;
+      color: white;
+      font-size: 0.85rem;
+    }
+
+    /* ===== RESPONSIF ===== */
+    @media (min-width: 769px) {
+      nav {
+        display: flex !important;
+        position: static;
+        flex-direction: row;
+        width: auto;
+        background: none;
+        animation: none;
+      }
+
+      .menu-toggle {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: 45vh;
+      }
+      .hero-content h1 {
+        font-size: 1.5rem;
+      }
+      .hero-content p {
+        font-size: 0.85rem;
+
+    }
+  }
